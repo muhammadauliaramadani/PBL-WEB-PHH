@@ -29,7 +29,7 @@
                 <li><a href="{{ route('visimisi') }}">Visi & Misi</a></li>
                 <li><a href="{{ route('organisasi.strukturOrganisasi') }}">Struktur Organisasi</a></li>
                 <li><a href="{{ route('dosen') }}">Dosen & PLP</a></li>
-                <li><a href="{{ route('login') }}">Admin</a></li>
+                <li><a href="{{ route('login') }}">Login Admin</a></li>
                 <li><a href="{{ route('akreditasi') }}">Akreditasi</a></li>
                 <li class="dropdown"><a href="#"><span>Fasilitas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
