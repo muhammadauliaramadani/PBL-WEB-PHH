@@ -9,6 +9,17 @@
         <div class="col-6 text-end">
             <ul class="list-inline">
                 <li class="list-inline-item">
+                    <form method="GET" action="{{ route('register') }}">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </li>
+                <li class="list-inline-item">
+                <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </form>
+                </li>
+                <li class="list-inline-item">
                     <a class="text-muted" href="https://adminkit.io/" target="_blank">Support</a>
                 </li>
                 <li class="list-inline-item">
@@ -24,3 +35,4 @@
         </div>
     </div>
 </div>
+

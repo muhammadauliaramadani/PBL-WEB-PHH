@@ -1,4 +1,5 @@
 <x-guest-layout>
+    <h2 class="text-center mb-4">Silahkan daftarkan akun baru</h2>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
@@ -50,3 +51,4 @@
         </div>
     </form>
 </x-guest-layout>
+

@@ -839,12 +839,12 @@ section,
     object-fit: cover;
     z-index: 1;
 }
-
-/* @media (max-width: 768px) {
-    .hero img {
-        content: url("../img/logoPHH.png");
+/* responsive hp */
+@media (max-width: 1024px) {
+    .hero .carousel {
+        min-height: 30vh;
     }
-} */
+}
 
 .hero .carousel-item {
     position: absolute;

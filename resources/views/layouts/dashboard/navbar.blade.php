@@ -91,8 +91,7 @@
                     <a href="#" class="list-group-item">
                         <div class="row g-0 align-items-center">
                             <div class="col-2">
-                                <img src="{{ asset('asset_dashboard/img/avatars/avatar-5.jpg') }}"
-                                    class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+                                <i class="bi bi-person-circle text-muted"></i>
                             </div>
                             <div class="col-10 ps-2">
                                 <div class="text-dark">Vanessa Tucker</div>
@@ -105,8 +104,7 @@
                     <a href="#" class="list-group-item">
                         <div class="row g-0 align-items-center">
                             <div class="col-2">
-                                <img src="{{ asset('asset_dashboard/img/avatars/avatar-2.jpg') }}"
-                                    class="avatar img-fluid rounded-circle" alt="William Harris">
+                                <i class="bi bi-person-circle text-muted"></i>
                             </div>
                             <div class="col-10 ps-2">
                                 <div class="text-dark">William Harris</div>
@@ -119,8 +117,7 @@
                     <a href="#" class="list-group-item">
                         <div class="row g-0 align-items-center">
                             <div class="col-2">
-                                <img src="{{ asset('asset_dashboard/img/avatars/avatar-4.jpg') }}"
-                                    class="avatar img-fluid rounded-circle" alt="Christina Mason">
+                                <i class="bi bi-person-circle text-muted"></i>
                             </div>
                             <div class="col-10 ps-2">
                                 <div class="text-dark">Christina Mason</div>
@@ -133,8 +130,7 @@
                     <a href="#" class="list-group-item">
                         <div class="row g-0 align-items-center">
                             <div class="col-2">
-                                <img src="{{ asset('asset_dashboard/img/avatars/avatar-3.jpg') }}"
-                                    class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
+                                <i class="bi bi-person-circle text-muted"></i>
                             </div>
                             <div class="col-10 ps-2">
                                 <div class="text-dark">Sharon Lessman</div>
@@ -158,22 +154,19 @@
 
             <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
                 data-bs-toggle="dropdown">
-                {{-- <img src="{{ asset('asset_dashboard/img/avatars/avatar.jpg') }}" class="avatar img-fluid rounded me-1"
-                    alt="Charles Hall" /> <span class="text-dark">{{ Auth::user()->name }}</span> --}}
-                    {{-- <span>{{ Auth()->user }}</span> --}}
+                <i class="bi bi-person-circle align-middle me-1"></i> <span class="text-dark">{{ Auth::user()->name }}</span>
             </a>
             <div class="dropdown-menu dropdown-menu-end">
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="align-middle me-1" data-feather="log-out"></i> Logout
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
 
-                <a class="dropdown-item" href="#"><i class="align-middle me-1"
-                        data-feather="pie-chart"></i> Analytics</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="index.html"><i class="align-middle me-1"
-                        data-feather="settings"></i> Settings & Privacy</a>
-                <a class="dropdown-item" href="#"><i class="align-middle me-1"
-                        data-feather="help-circle"></i> Help Center</a>
-                <div class="dropdown-divider"></div>
-                
             </div>
         </li>
     </ul>
 </div>
+

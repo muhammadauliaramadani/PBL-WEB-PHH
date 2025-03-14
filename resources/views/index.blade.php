@@ -26,21 +26,21 @@
       <div class="row gy-4">
         <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
           <div class="featured-item position-relative">
-            <div class="icon"><i class="bi bi-file-earmark-check"></i></div>
+            <div class="icon"><i class="bi bi-shield-fill-check"></i></div>
             <h4><a href="{{ route('akreditasi') }}" class="stretched-link">Akreditasi</a></h4>
             <p>Pelajari lebih lanjut tentang pencapaian akreditasi Program Studi Pengolahan Hasil Hutan</p>
           </div>
         </div><!-- End Featured Item -->
         <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
           <div class="featured-item position-relative">
-            <div class="icon"><i class="bi bi-house-gear-fill"></i></div>
+            <div class="icon"><i class="bi bi-houses-fill"></i></div>
             <h4><a href="{{ route('lab.index') }}" class="stretched-link">Fasilitas</a></h4>
             <p>Pelajari lebih lanjut tentang fasilitas yang tersedia untuk mendukung kegiatan akademikmu</p>
           </div>
         </div><!-- End Featured Item -->
         <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="300">
           <div class="featured-item position-relative">
-            <div class="icon"><i class="bi bi-person-badge"></i></div>
+            <div class="icon"><i class="bi bi-person-vcard-fill"></i></div>
             <h4><a href="{{ route('dosen') }}" class="stretched-link">Dosen</a></h4>
             <p>Pelajari lebih lanjut tentang dosen-dosen yang mengajar di Program Studi Pengolahan Hasil Hutan</p>
           </div>
@@ -142,11 +142,11 @@
 <!-- Maps Section -->
 <section id="maps" class="section maps">
   <div class="container section-title" data-aos="fade-up">
-    <h2>Maps</h2>
+    <h2>Location</h2>
   </div><!-- End Section Title -->
   <div class="container p-0" data-aos="fade-up" data-aos-delay="100">
     <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d366.2521797358817!2d117.12618609950191!3d-0.5358570490742379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df68100456af045%3A0xe3d1ce3aac5cb84e!2sPS.PHH%20pengolahan%20hasil%20hutan!5e0!3m2!1sid!2sid!4v1740999058336!5m2!1sid!2sid" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481.82220502825834!2d117.12599491550068!3d-0.5360511459681861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df68100456af045%3A0xe3d1ce3aac5cb84e!2sPS.PHH%20pengolahan%20hasil%20hutan!5e1!3m2!1sid!2sid!4v1741875680658!5m2!1sid!2sid" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section><!-- /Maps Section -->
