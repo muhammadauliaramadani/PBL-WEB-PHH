@@ -26,23 +26,44 @@
       <div class="row gy-4">
         <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
           <div class="featured-item position-relative">
-            <div class="icon"><i class="bi bi-shield-fill-check"></i></div>
-            <h4><a href="{{ route('akreditasi') }}" class="stretched-link">Akreditasi</a></h4>
-            <p>Pelajari lebih lanjut tentang pencapaian akreditasi Program Studi Pengolahan Hasil Hutan</p>
+            <div class="icon"><i class="bi bi-mortarboard"></i></div>
+            <h4><a href="{{ route('profil') }}" class="stretched-link">Profil</a></h4>
+            <p>Pelajari lebih lanjut tentang profil Program Studi Pengolahan Hasil Hutan</p>
           </div>
         </div><!-- End Featured Item -->
         <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
           <div class="featured-item position-relative">
-            <div class="icon"><i class="bi bi-houses-fill"></i></div>
-            <h4><a href="{{ route('lab.index') }}" class="stretched-link">Fasilitas</a></h4>
-            <p>Pelajari lebih lanjut tentang fasilitas yang tersedia untuk mendukung kegiatan akademikmu</p>
+            <div class="icon"><i class="bi bi-lightbulb"></i></div>
+            <h4><a href="{{ route('visimisi') }}" class="stretched-link">Visi Misi</a></h4>
+            <p>Pelajari lebih lanjut tentang visi dan misi Program Studi Pengolahan Hasil Hutan</p>
           </div>
         </div><!-- End Featured Item -->
         <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="300">
           <div class="featured-item position-relative">
-            <div class="icon"><i class="bi bi-person-vcard-fill"></i></div>
+            <div class="icon"><i class="bi bi-diagram-3"></i></div>
+            <h4><a href="{{ route('organisasi.strukturOrganisasi') }}" class="stretched-link">Struktur Organisasi</a></h4>
+            <p>Pelajari lebih lanjut tentang struktur organisasi Program Studi Pengolahan Hasil Hutan</p>
+          </div>
+        </div><!-- End Featured Item -->
+        <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="400">
+          <div class="featured-item position-relative">
+            <div class="icon"><i class="bi-journal-richtext"></i></div>
             <h4><a href="{{ route('dosen') }}" class="stretched-link">Dosen</a></h4>
             <p>Pelajari lebih lanjut tentang dosen-dosen yang mengajar di Program Studi Pengolahan Hasil Hutan</p>
+          </div>
+        </div><!-- End Featured Item -->
+        <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="500">
+          <div class="featured-item position-relative">
+            <div class="icon"><i class="bi bi-building"></i></div>
+            <h4><a href="{{ route('lab.index') }}" class="stretched-link">Fasilitas</a></h4>
+            <p>Pelajari lebih lanjut tentang fasilitas yang tersedia untuk mendukung kegiatan akademikmu</p>
+          </div>
+        </div><!-- End Featured Item -->
+        <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="600">
+          <div class="featured-item position-relative">
+            <div class="icon"><i class="bi bi-file-earmark-text"></i></div>
+            <h4><a href="{{ route('akreditasi') }}" class="stretched-link">Akreditasi</a></h4>
+            <p>Pelajari lebih lanjut tentang pencapaian akreditasi Program Studi Pengolahan Hasil Hutan</p>
           </div>
         </div><!-- End Featured Item -->
       </div>

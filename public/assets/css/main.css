@@ -855,14 +855,6 @@ section,
     overflow: hidden;
 }
 
-.hero .carousel-item:before {
-    content: "";
-    background: color-mix(in srgb, var(--background-color), transparent 60%);
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-}
-
 .hero .carousel-item::before {
     content: "";
     background-color: color-mix(
@@ -1010,6 +1002,12 @@ section,
     width: 100%;
     position: relative;
     z-index: 1;
+    transform: scale(1); /* Default ukuran */
+}
+
+.hero .featured-item:hover {
+    transform: scale(1.05); /* Zoom saat hover */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Tambahkan efek bayangan */
 }
 
 .hero .featured-item:before {
@@ -1029,6 +1027,10 @@ section,
     color: var(--accent-color);
     font-size: 36px;
     transition: ease-in-out 0.3s;
+}
+
+.hero .featured-item:hover .icon i {
+    color: var(--surface-color); /* Ubah warna ikon saat hover */
 }
 
 .hero .featured-item h4 {
@@ -1128,6 +1130,57 @@ section,
     margin-bottom: 0;
 }
 
+/* 🔹 Efek hover hanya untuk "Prospek Karir" */
+#about .service-item {
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    padding: 10px;
+    background: var(--surface-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#about .service-item:hover {
+    transform: translateY(-5px);
+    background: var(--accent-color);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Efek hover hanya untuk daftar alasan masuk prodi */
+#about .content ul li {
+    transition: transform 0.2s ease-in-out;
+}
+
+#about .content ul li:hover {
+    transform: translateX(5px);
+}
+
+/* 🔹 Animasi ikon hanya untuk daftar alasan masuk prodi */
+#about .content ul li i {
+    transition: transform 0.3s ease-in-out;
+}
+
+#about .content ul li:hover i {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -1163,6 +1216,7 @@ section,
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    line-clamp: 2; /* Properti standar */
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -1171,6 +1225,7 @@ section,
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+    line-clamp: 4; /* Properti standar */
     overflow: hidden;
     text-overflow: ellipsis;
 }

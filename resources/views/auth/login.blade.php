@@ -19,10 +19,6 @@
                             <input type="password" class="form-control" id="password" name="password" required>
                             <x-input-error :messages="$errors->get('password')" class="mt-2" />
                         </div>
-                        <div class="form-group form-check mt-3">
-                            <input type="checkbox" class="form-check-input" id="remember" name="remember" {{ old('remember') ? 'checked' : '' }}>
-                            <label class="form-check-label" for="remember">Remember me</label>
-                        </div>
                         <div class="mt-3">
                             <button type="submit" class="btn btn-primary btn-block">
                                 {{ __('Log in') }}

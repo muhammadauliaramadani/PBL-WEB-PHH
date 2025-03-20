@@ -4,20 +4,19 @@
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
           <i class="bi bi-envelope-paper d-flex align-items-center"><a href="mailto:contact@example.com">prodiphh@politanisamarinda.ac.id</a></i>
-          <i class="bi bi-telephone-fill d-flex align-items-center ms-4"><span>(0541) 260421, 260680</span></i>
+          <!-- <i class="bi bi-telephone-fill d-flex align-items-center ms-4"><span>(0541) 260421, 260680</span></i> -->
         </div>
-        {{-- <div class="social-links d-none d-md-flex align-items-center">
+        <!-- {{-- <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
           <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
           <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div> --}}
+        </div> --}} -->
       </div>
     </div><!-- End Top Bar -->
     <div class="branding">
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="/" class="logo d-flex align-items-center">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
           <img src="{{ asset('assets/img/LogoPHH.png') }}" alt="/">
           <h1 class="sitename">PHH<br></h1>
         </a>

@@ -25,15 +25,15 @@ class AdminDosenController extends Controller
         'nama' => 'required|string|max:255',
         'nip' => 'required|string|unique:dosens',
         'jabatan' => 'required|string|max:255',
-        'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240', // Validasi foto dengan ukuran maksimal 10mb
+        'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240', 
     ]);
 
     $data = $request->all();
 
-    // Menyimpan foto jika ada
+    
     if ($request->hasFile('foto')) {
-        // Menyimpan file di folder 'storage/app/public/images'
-        $data['foto'] = $request->file('foto')->store('images', 'public'); // Ubah 'dosens' menjadi 'images'
+        
+        $data['foto'] = $request->file('foto')->store('images', 'public'); 
     }
 
     Dosen::create($data);
@@ -53,15 +53,15 @@ class AdminDosenController extends Controller
             'nama' => 'required|string|max:255',
             'nip' => 'required|string|unique:dosens,nip,' . $id,
             'jabatan' => 'required|string|max:255',
-            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240', // Validasi foto dengan ukuran maksimal 10mb
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240', 
         ]);
 
         $dosen = Dosen::findOrFail($id);
         $data = $request->all();
 
-        // Menyimpan foto baru jika ada
+        
         if ($request->hasFile('foto')) {
-            // Hapus foto lama jika ada
+            
             if ($dosen->foto) {
                 Storage::disk('public')->delete($dosen->foto);
             }
@@ -76,7 +76,7 @@ class AdminDosenController extends Controller
     public function delete($id)
     {
         $dosen = Dosen::findOrFail($id);
-        // Hapus foto jika ada
+        
         if ($dosen->foto) {
             Storage::disk('public')->delete($dosen->foto);
         }

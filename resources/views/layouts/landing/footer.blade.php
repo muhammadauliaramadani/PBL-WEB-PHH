@@ -27,7 +27,7 @@
             <p>Politeknik Pertanian Negeri Samarinda</p>
             <p>Jalan Sam Ratulangi, Kec. Samarinda Seberang</p>
             <p>Kota Samarinda, Kalimantan Timur 75242</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>(0541) 260421, 260680</span></p>
+            <!-- <p class="mt-3"><strong>Phone:</strong> <span>(0541) 260421, 260680</span></p> -->
             <p><strong>Email:</strong> <span>prodiphh@politanisamarinda.ac.id</span></p>
           </div>
         </div>
