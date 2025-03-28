@@ -20,26 +20,23 @@ class AdminDosenController extends Controller
     }
 
     public function store(Request $request)
-{
-    $request->validate([
-        'nama' => 'required|string|max:255',
-        'nip' => 'required|string|unique:dosens',
-        'jabatan' => 'required|string|max:255',
-        'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240', 
-    ]);
+    {
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'nip' => 'required|string|unique:dosens',
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240', 
+        ]);
 
-    $data = $request->all();
+        $data = $request->all();
 
-    
-    if ($request->hasFile('foto')) {
-        
-        $data['foto'] = $request->file('foto')->store('images', 'public'); 
+        if ($request->hasFile('foto')) {
+            $data['foto'] = $request->file('foto')->store('images', 'public'); 
+        }
+
+        Dosen::create($data);
+
+        return redirect()->route('admin.dosen.index')->with('success', 'Dosen berhasil ditambahkan.');
     }
-
-    Dosen::create($data);
-
-    return redirect()->route('admin.dosen.index')->with('success', 'Dosen berhasil ditambahkan.');
-}
 
     public function edit($id)
     {
@@ -52,16 +49,13 @@ class AdminDosenController extends Controller
         $request->validate([
             'nama' => 'required|string|max:255',
             'nip' => 'required|string|unique:dosens,nip,' . $id,
-            'jabatan' => 'required|string|max:255',
             'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240', 
         ]);
 
         $dosen = Dosen::findOrFail($id);
         $data = $request->all();
 
-        
         if ($request->hasFile('foto')) {
-            
             if ($dosen->foto) {
                 Storage::disk('public')->delete($dosen->foto);
             }

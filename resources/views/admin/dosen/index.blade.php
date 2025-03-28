@@ -31,7 +31,6 @@
                                 <th>Foto</th>
                                 <th>Nama</th>
                                 <th>NIP</th>
-                                <th>Jabatan</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -46,7 +45,6 @@
                                     </td>
                                     <td>{{ $dosen->nama }}</td>
                                     <td>{{ $dosen->nip }}</td>
-                                    <td>{{ $dosen->jabatan }}</td>
                                     <td>
                                         <a href="{{ route('admin.dosen.edit', $dosen->id) }}" class="btn btn-warning">Ubah</a>
                                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#dosen-delete-{{ $dosen->id }}">Hapus</button>

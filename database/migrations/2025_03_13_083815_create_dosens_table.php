@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('nip')->unique(); // NIP
             $table->string('nama'); // Nama Dosen
-            $table->string('jabatan'); // Jabatan
             $table->string('foto')->nullable(); // Foto (opsional)
             $table->timestamps();
         });
@@ -29,3 +28,4 @@ return new class extends Migration
         Schema::dropIfExists('dosens');
     }
 };
+

@@ -27,10 +27,6 @@
                             <input type="text" class="form-control" id="nip" name="nip" required>
                         </div>
                         <div class="mb-3">
-                            <label for="jabatan" class="form-label">Jabatan</label>
-                            <input type="text" class="form-control" id="jabatan" name="jabatan" required>
-                        </div>
-                        <div class="mb-3">
                             <label for="foto" class="form-label">Foto</label>
                             <input type="file" class="form-control" id="foto" name="foto" accept="image/*">
                         </div>

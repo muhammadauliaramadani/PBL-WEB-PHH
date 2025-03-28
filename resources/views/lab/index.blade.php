@@ -1,8 +1,8 @@
 @extends('layouts.landing.index')
 @section('content')
- <section id="lab" class="lab-section services section m-0 pt-4">
+<section id="lab" class="lab-section services section m-0 pt-4">
     <div class="container section-title pb-5" data-aos="fade-up">
-        <h2 class="m-0">Laboratorium</h2>
+        <h2 class="m-0">Fasilitas</h2>
     </div>
     <div class="container">
         <div class="row g-4 m-0 p-0 justify-content-center">

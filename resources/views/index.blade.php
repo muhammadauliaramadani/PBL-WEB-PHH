@@ -172,8 +172,7 @@
   </div>
 </section><!-- /Maps Section -->
 
-
-<div class="container section-title" data-aos="fade-up">
+<div id="hubungi-kami" class="container section-title" data-aos="fade-up">
   <h2>Contact Us</h2>
   <div class="contact-form">
       @if(Session::has('message'))
@@ -181,13 +180,31 @@
       @endif
       <form action="{{ route('contact.submit') }}" method="POST">
           @csrf
-          <label for="name">Name:</label>
-          <input type="text" name="name" required>
-          <label for="email">Email:</label>
-          <input type="email" name="email" required>
-          <label for="message">Message:</label>
-          <textarea name="message" required></textarea>
-          <button type="submit">Send Message</button>
+          <div class="mb-3">
+              <label for="name" class="form-label">Name:</label>
+              <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-person"></i></span>
+                  <input type="text" class="form-control" name="name" required>
+              </div>
+          </div>
+          <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                  <input type="email" class="form-control" name="email" required>
+              </div>
+          </div>
+          <div class="mb-3">
+              <label for="message" class="form-label">Message:</label>
+              <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-chat-dots"></i></span>
+                  <textarea class="form-control" name="message" required></textarea>
+              </div>
+          </div>
+          <button type="submit" class="btn btn-primary">
+              <i class="bi bi-send"></i> Send Message
+          </button>
       </form>
   </div>
+</div>
 @endsection

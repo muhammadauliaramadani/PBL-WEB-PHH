@@ -260,7 +260,7 @@ h6 {
     .navmenu a,
     .navmenu a:focus {
         color: var(--nav-color);
-        padding: 18px 15px;
+        padding: 12px 15px;
         font-size: 16px;
         font-family: var(--nav-font);
         font-weight: 500;
@@ -293,6 +293,7 @@ h6 {
         margin: 0;
         padding: 10px 0;
         background: var(--nav-dropdown-background-color);
+        border: 2px solid rgba(0, 0, 0, 0.1);
         display: block;
         position: absolute;
         visibility: hidden;
@@ -341,7 +342,7 @@ h6 {
     .navmenu .dropdown .dropdown:hover > ul {
         opacity: 1;
         top: 0;
-        left: -100%;
+        left: -120%;
         visibility: visible;
     }
 }
@@ -2743,14 +2744,15 @@ section,
     color: color-mix(in srgb, var(--default-color), transparent 60%);
     font-size: 14px;
 }
-/* contas us section */
+/* Contact Us Section */
 .contact-form {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 30px auto;
+    padding: 30px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
 }
 
 .contact-form h2 {
@@ -2767,19 +2769,43 @@ section,
     font-size: 16px;
 }
 
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.input-group-text {
+    background: #f8f9fa;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
 .contact-form button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: var(--surface-color);
     color: #fff;
     border: none;
@@ -2792,10 +2818,22 @@ section,
 .contact-form button:hover {
     background-color: var(--accent-color);
 }
+
 .contact-form .message {
     text-align: center;
     margin-bottom: 20px;
     color: green;
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
 }
 
 /* login section */
@@ -2851,3 +2889,140 @@ section,
     overflow: hidden;
 }
 /* end maps section */
+
+/* struktur organisasi section */
+
+.organisasi-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.organisasi-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.organisasi-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: var(--accent-color);
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.organisasi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    justify-content: center;
+}
+
+.organisasi-card {
+    background: #fff; /* Pastikan default-nya putih */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+        background 0.3s ease-in-out;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.organisasi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: var(--surface-color); /* Warna berubah saat hover */
+}
+
+/* Efek Hover pada Gambar */
+.organisasi-img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid var(--accent-color);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.organisasi-card:hover .organisasi-img {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-color: var(--hover-color);
+}
+
+.organisasi-subtitle {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.organisasi-name,
+.organisasi-nip {
+    color: #555;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.organisasi-description {
+    color: #777;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+/* Tombol Lihat Profil */
+.organisasi-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: var(--accent-color);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.organisasi-btn:hover {
+    background: var(--hover-color);
+}
+
+/* Animasi Muncul Saat Scroll */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.organisasi-card {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-in-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .organisasi-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* end struktur organisasi section */
