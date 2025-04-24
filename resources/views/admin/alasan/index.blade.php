@@ -1,5 +1,17 @@
 @extends('layouts.dashboard')
 @section('content')
+    @if(session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+    @if(session('failed'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ session('failed') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     <div class="row">
         <div class="col-md-12">
             <div class="card">
@@ -8,7 +20,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <a href="{{ route('alasan.create') }}" class="btn btn-primary float-end">Tambah</a>
+                        <a href="{{ route('admin.alasan.create') }}" class="btn btn-primary float-end">Tambah</a>
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -23,8 +35,8 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>
-                                            <a href="{{ route('alasan.edit', $item->id) }}" class="btn btn-primary">Edit</a>
-                                            <form action="{{ route('alasan.delete', $item->id) }}" method="POST" style="display:inline;">
+                                            <a href="{{ route('admin.alasan.edit', $item->id) }}" class="btn btn-primary">Edit</a>
+                                            <form action="{{ route('admin.alasan.delete', $item->id) }}" method="POST" style="display:inline;">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{ $item->id }}">
@@ -53,7 +65,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 @endsection
+

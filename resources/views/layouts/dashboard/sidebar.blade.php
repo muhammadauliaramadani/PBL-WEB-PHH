@@ -10,7 +10,7 @@
 </li>
 
 <li class="sidebar-item">
-    <a class="sidebar-link" href="{{ route('alasan.index') }}">
+    <a class="sidebar-link" href="{{ route('admin.alasan.index') }}">
         <i class="align-middle" data-feather="papers"></i> <span class="align-middle">Alasan</span>
     </a>
     <a class="sidebar-link" href="{{ route('admin.berita.index') }}">

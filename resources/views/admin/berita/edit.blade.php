@@ -1,4 +1,5 @@
 @extends('layouts.dashboard')
+
 @section('content')
     <div class="row">
         <div class="col-md-12">
@@ -10,6 +11,7 @@
                     <form action="{{ route('admin.berita.update', $berita->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('put')
+
                         <div class="mb-3">
                             <label for="image" class="form-label">Gambar</label>
                             <input type="file" class="form-control" id="image" name="image">
@@ -20,21 +22,21 @@
                                 </div>
                             @endif
                         </div>
+
                         <div class="mb-3">
-                            <label for="editor" class="form-label">Judul</label>
-                            <input type="text" class="form-control" id="title" name="title" value="{{ $berita->title }}">
+                            <label for="title" class="form-label">Judul</label>
+                            <input type="text" class="form-control" id="title" name="title" value="{{ old('title', $berita->title) }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Deskripsi</label>
+                            <textarea class="form-control" id="description" name="description" rows="6" required>{{ $berita->description }}</textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="editor" class="form-label">Deskripsi</label>
-                            <div id="editor">
-                                {!! old('description', $berita->description) !!}
-                            </div>
-                            <input type="hidden" name="description" id="description">
+                            <label for="date" class="form-label">Tanggal</label>
+                            <input type="date" class="form-control" id="date" name="date" value="{{ old('date', $berita->date) }}" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="date">Tanggal</label>
-                            <input type="date" class="form-control" id="date" name="date" value="{{ old('date', $berita->date) }}">
-                        </div>
+
                         <a href="{{ url()->previous() }}" class="btn btn-secondary">Batal</a>
                         <button type="submit" class="btn btn-primary">Ubah</button>
                     </form>
@@ -43,4 +45,3 @@
         </div>
     </div>
 @endsection
-

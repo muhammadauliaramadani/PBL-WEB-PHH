@@ -1,15 +1,23 @@
 @extends('layouts.landing.index')
 
 @section('content')
-<section id="output-lulusan-detail" class="detail-section services section m-0 pt-4">
-    <div class="container p-0 mt-0">
-        <div class="img-content mb-3">
-            <img src="{{ Storage::url($outputLulusan->image) }}" alt="">
+<section id="output-lulusan-detail" class="section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="mb-4">
+                    <img src="{{ Storage::url($outputLulusan->image) }}" alt="{{ $outputLulusan->title }}" class="img-fluid rounded shadow-sm w-100">
+                </div>
+                <h3 class="fw-bold mb-2">
+                    {{ $outputLulusan->title }}
+                </h3>
+                <p class="text-muted mb-4">{{ $outputLulusan->formatted_date_dfy }}</p>
+                <div class="output-lulusan-description lh-lg">
+                    {!! $outputLulusan->description !!}
+                </div>
+            </div>
         </div>
-        <h3 class="fw-bold">
-            {{ $outputLulusan->title }}
-        </h3>
-        <p class="lh-sm m-0 p-0">{!! $outputLulusan->description !!}</p>
     </div>
 </section>
 @endsection
+

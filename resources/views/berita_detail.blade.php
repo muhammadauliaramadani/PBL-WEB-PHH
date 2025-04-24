@@ -1,16 +1,23 @@
 @extends('layouts.landing.index')
 
 @section('content')
-<section id="berita-detail" class="detail-section services section m-0 pt-4">
-    <div class="container p-0 mt-0">
-        <div class="img-content mb-3">
-            <img src="{{ Storage::url($berita->image) }}" alt="">
+<section id="berita-detail" class="section py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="mb-4">
+                    <img src="{{ Storage::url($berita->image) }}" alt="{{ $berita->title }}" class="img-fluid rounded shadow-sm w-100">
+                </div>
+                <h3 class="fw-bold mb-2">
+                    {{ $berita->title }}
+                </h3>
+                <p class="text-muted mb-4">{{ $berita->formatted_date_dfy }}</p>
+                <div class="berita-description lh-lg">
+                    {!! $berita->description !!}
+                </div>
+
+            </div>
         </div>
-        <h3 class="fw-bold">
-            {{ $berita->title }}
-        </h3>
-        <p class="m-0 p-0 mb-4">{{ $berita->formatted_date_dfy }}</p>
-        <p class="lh-sm m-0 p-0">{!! $berita->description !!}</p>
     </div>
 </section>
 @endsection

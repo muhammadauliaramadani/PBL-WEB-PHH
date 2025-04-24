@@ -9,7 +9,7 @@
         <div class="col-6 text-end">
             <ul class="list-inline">
                 <li class="list-inline-item">
-                    <form method="GET" action="{{ route('register') }}">
+                    <form method="GET" action="{{ route('admin.register') }}">
                         <button type="submit" class="btn btn-primary">Register</button>
                     </form>
                 </li>

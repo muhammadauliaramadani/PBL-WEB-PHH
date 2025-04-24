@@ -55,7 +55,7 @@
         <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="500">
           <div class="featured-item position-relative">
             <div class="icon"><i class="bi bi-building"></i></div>
-            <h4><a href="{{ route('lab.index') }}" class="stretched-link">Fasilitas</a></h4>
+            <h4><a href="{{ route('fasilitas.index') }}" class="stretched-link">Fasilitas</a></h4>
             <p>Pelajari lebih lanjut tentang fasilitas yang tersedia untuk mendukung kegiatan akademikmu</p>
           </div>
         </div><!-- End Featured Item -->
@@ -77,7 +77,7 @@
       <!-- Output Lulusan Item -->
       <div class="col-12 col-lg-6 order-2 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay="100">
         <div class="container section-title" data-aos="fade-up">
-          <h2 class="m-0">Prospek Karir</h2>
+          <h2 class="m-0">Output Lulusan</h2>
         </div>
         @if ($outputLulusans->isNotEmpty())
         @foreach ($outputLulusans as $item)

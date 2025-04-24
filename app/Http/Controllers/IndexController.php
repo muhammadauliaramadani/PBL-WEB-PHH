@@ -58,22 +58,22 @@ class IndexController extends Controller
     
     public function sifatKayuAnalisaProduk()
     {
-        return view('lab.sifatkayuanalisaproduk');
+        return view('fasilitas.sifatkayuanalisaproduk');
     }
 
     public function rekayasakayu()
     {
-        return view('lab.rekayasakayu');
+        return view('fasilitas.rekayasakayu');
     }
 
     public function keteknikan()
     {
-        return view('lab.keteknikan');
+        return view('fasilitas.keteknikan');
     }
 
     public function hasilhutannonkayu()
     {
-        return view('lab.hasil-hutan-non-kayu');
+        return view('fasilitas.hasil-hutan-non-kayu');
     }
 
     public function akreditasi()
@@ -88,9 +88,9 @@ class IndexController extends Controller
     }
 
     
-    public function labindex()
+    public function fasilitasindex()
     {
-        return view('lab.index');
+        return view('fasilitas.index');
     }
 }
 

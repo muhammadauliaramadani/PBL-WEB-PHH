@@ -29,12 +29,12 @@
                             <li><a href="{{ route('dosen') }}">Dosen & PLP</a></li>
                             <li><a href="{{ route('akreditasi') }}">Akreditasi</a></li>
                             <li class="dropdown">
-                                <a href="#"><span>Fasilitas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                                <a href="{{ route('fasilitas.index') }}"><span>Fasilitas</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                                 <ul>
-                                    <li><a href="{{ route('lab.sifatkayuanalisaproduk') }}">Lab Sifat Kayu Analisa Produk</a></li>
-                                    <li><a href="{{ route('lab.keteknikan') }}">Lab Keteknikan</a></li>
-                                    <li><a href="{{ route('lab.rekayasakayu') }}">Lab Rekayasa Kayu</a></li>
-                                    <li><a href="{{ route('lab.hasil-hutan-non-kayu') }}">Lab Hasil Hutan Non Kayu</a></li>
+                                    <li><a href="{{ route('fasilitas.sifatkayuanalisaproduk') }}">Lab Sifat Kayu Analisa Produk</a></li>
+                                    <li><a href="{{ route('fasilitas.keteknikan') }}">Lab Keteknikan</a></li>
+                                    <li><a href="{{ route('fasilitas.rekayasakayu') }}">Lab Rekayasa Kayu</a></li>
+                                    <li><a href="{{ route('fasilitas.hasil-hutan-non-kayu') }}">Lab Hasil Hutan Non Kayu</a></li>
                                 </ul>
                             </li>
                             <li><a href="{{ route('login') }}">Admin</a></li>
@@ -53,7 +53,7 @@
                     </li> -->
 
                     <li><a href="{{ route('berita-lainnya') }}">Berita</a></li>
-                    <li><a href="#hubungi-kami">Hubungi Kami</a></li>
+                    <a href="{{ url('/#hubungi-kami') }}">Hubungi Kami</a>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>

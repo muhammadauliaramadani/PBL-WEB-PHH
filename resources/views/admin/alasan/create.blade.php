@@ -7,7 +7,7 @@
                     <h4>Tambah Alasan</h4>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('alasan.store') }}" method="POST">
+                    <form action="{{ route('admin.alasan.store') }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="name">Nama Alasan</label>

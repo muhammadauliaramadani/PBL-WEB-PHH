@@ -1,40 +1,41 @@
 @extends('layouts.landing.index')
 
 @section('content')
-<section id="berita-lainnya" class="berita-section services section m-0 pt-4">
-    <div class="container section-title pb-5" data-aos="fade-up">
-        <h2 class="m-0">Berita</h2>
-    </div>
-    <div class="container p-0 mt-0">
-        <div class="row g-4 m-0 p-0">
+<section id="berita-lainnya" class="berita-section section py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Berita</h2>
+        </div>
+
+        <div class="row g-4">
             @if ($beritas->isNotEmpty())
-            @foreach ($beritas as $berita)
-                <!-- Berita Item -->
-                <div class="col-lg-6 col-md-12 mx-auto" data-aos="fade-up" data-aos-delay="100">
-                    <a href="{{ route('berita-detail', $berita->id) }}" class="position-relative text-decoration-none text-black">  
-                        <div class="service-item position-relative d-flex flex-row text-decoration-none gap-3">
-                            <div class="row m-0 p-0">
-                                <div class="col-12 col-md-3 mb-3 mb-md-0 m-0 p-0">
-                                    <div class="img-container">
-                                        <img src="{{ Storage::url($berita->image) }}" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-9 text-start m-0 p-0 ps-0 ps-md-3">
-                                    <h5 class="title fw-bold lh-sm mb-2 m-0 p-0">{{ $berita->title }}</h5>
-                                    <p class="date lh-sm mb-2 m-0 p-0">{{ $berita->formatted_date_dfy }}</p>
-                                    <p class="description m-0 p-0">{{ \Illuminate\Support\Str::limit(strip_tags($berita->description), 200) }}</p>
-                                </div>
+                @foreach ($beritas as $berita)
+                <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="100">
+                    <a href="{{ route('berita-detail', $berita->id) }}" class="text-decoration-none text-dark">
+                        <div class="d-flex border rounded shadow-sm p-3 gap-3 service-item">
+                            <!-- Gambar -->
+                            <div style="width: 120px; height: 100px; flex-shrink: 0;">
+                                <img src="{{ Storage::url($berita->image) }}"
+                                     alt="{{ $berita->title }}"
+                                     class="img-fluid rounded"
+                                     style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+
+                            <!-- Teks -->
+                            <div class="flex-grow-1">
+                                <h5 class="title fw-bold mb-1">{{ $berita->title }}</h5>
+                                <small class="text-muted d-block mb-2">{{ $berita->formatted_date_dfy }}</small>
+                                <p class="description mb-0">
+                                    {{ \Illuminate\Support\Str::limit(strip_tags($berita->description), 200) }}
+                                </p>
                             </div>
                         </div>
                     </a>
                 </div>
-                <!-- End Berita Item -->
-            @endforeach
+                @endforeach
             @else
-                <div class="col-lg-4 col-md-6 mx-auto" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item position-relative text-decoration-none">
-                        <p class="text-center">Belum ada Berita yang tersedia.</p>
-                    </div>
+                <div class="col-12 text-center">
+                    <p class="text-muted">Belum ada berita yang tersedia.</p>
                 </div>
             @endif
         </div>

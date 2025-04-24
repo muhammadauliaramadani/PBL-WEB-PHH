@@ -29,7 +29,7 @@ class AlasanController extends Controller
             'name' => $request->name,
         ]);
 
-        return redirect()->route('alasan.index');
+        return redirect()->route('admin.alasan.index')->with('success', 'Alasan berhasil ditambahkan!');
     }
 
     public function edit($id)
@@ -49,14 +49,14 @@ class AlasanController extends Controller
             'name' => $request->name,
         ]);
 
-        return redirect()->route('alasan.index');
+        return redirect()->route('admin.alasan.index')->with('success', 'Alasan berhasil diubah!');
     }
 
     public function destroy($id)
     {
         $alasan = Alasan::findOrFail($id);
         $alasan->delete();
-        return redirect()->route('alasan.index');
-    }
 
+        return redirect()->route('admin.alasan.index')->with('success', 'Alasan berhasil dihapus!');
+    }
 }

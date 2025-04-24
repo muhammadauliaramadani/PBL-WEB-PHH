@@ -17,7 +17,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Alasan</h5>
                                     <p class="card-text">Kelola alasan Anda dengan efisien.</p>
-                                    <a href="{{ route('alasan.index') }}" class="btn btn-light">Lihat Detail</a>
+                                    <a href="{{ route('admin.alasan.index') }}" class="btn btn-light">Lihat Detail</a>
                                 </div>
                             </div>
                         </div>
